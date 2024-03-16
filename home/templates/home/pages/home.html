@@ -7,4 +7,13 @@
 <link rel="stylesheet" href="{% static "home/css/pages/home.css" %}">
 
     <p>este es el hijo home</p>
+
+    {% for profesor in profesores %}
+
+        <h2>{{profesor}}</h2>
+
+    {% endfor %}
+
+
+
 {% endblock content %}
