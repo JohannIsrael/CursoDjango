@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block title %}{% endblock title %}</title>
+
+    <!--Estilos base-->
+    {% block linkscss %}{% endblock linkscss %}
+    
+    {% include "home/includes/linkscss.html" %}   
 </head>
+
 <body>
-    <h2>ESTE ES EL PADRE</h2>
+    
+    {% include "home/includes/navbar.html" %}  
+
     {% block content %}{% endblock content %}
 
-    {% include "home/includes/scripts.html" %}
+    {% include "home/includes/footer.html" %}  
+
+    {% include "home/includes/scripts.html" %}  
 
 </body>
 </html>

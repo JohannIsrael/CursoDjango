@@ -1,0 +1,44 @@
+
+:root {
+    /* General */
+    
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body{
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
+    margin: 0 auto;
+}
+  
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+/* Other Classes for Page Styling */
+
+body {
+  background: #ff5500;
+  background: linear-gradient(to right, #e66400, #c35e10);
+}
+
+footer {
+   
+}
+  

@@ -8,6 +8,9 @@ class Aulas(models.Model):
     
     class Meta:
         db_table = 'aulas'
+        
+    def __str__(self):
+        return self.nombre
 
     
 class Carreras(models.Model):
@@ -28,6 +31,9 @@ class Alumnos(models.Model):
     
     class Meta:
         db_table = 'alumnos'
+        
+    def __str__(self):
+        return f'{self.id_user.username} semetre: {self.semestre}'
     
 class Materias(models.Model):
     

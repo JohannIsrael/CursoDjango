@@ -79,10 +79,15 @@ WSGI_APPLICATION = 'curso.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "OPTIONS": {
-            "service": ".pg_service.conf.my_service",
-            "passfile": ".pg_service.conf.my_pgpass",
-        },
+        'NAME': 'escuela',
+        'HOST': 'localhost',
+        'PORT': 5432,
+        'USER': 'postgres',
+        'PASSWORD': 'pg314',
+        # "OPTIONS": {
+        #     "service": ".pg_service.conf.my_service",
+        #     "passfile": ".pg_service.conf.my_pgpass",
+        # },
     }
 }
 

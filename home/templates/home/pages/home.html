@@ -2,18 +2,58 @@
 
 {% load static %}
 
+{% block title %}Inicio{% endblock title %}
+
 {% block content %}
 
-<link rel="stylesheet" href="{% static "home/css/pages/home.css" %}">
+    <main class="container">
+        <div class="row my-4">
+            <!--Formas insegura de manejar forms-->
 
-    <p>este es el hijo home</p>
+            <!--
+                
+            <form action="" method="POST">
+                {% csrf_token %}
 
-    {% for profesor in profesores %}
+            <label for=""> Nombre
+                    <input name="nombre" type="text">
+                </label>
+            
+                <button type="submit">Enviar</button> 
+            </form>
 
-        <h2>{{profesor}}</h2>
+            -->
 
-    {% endfor %}
 
+            <!--
+
+            {% comment %} Formulario Genérico {% endcomment %}
+
+            <form action="" method="POST">
+                {% csrf_token %}
+
+                <label for=""> Nombre<input name="nombre" type="text"></label>     
+                {{form.as_p}}
+                <button type="submit">Enviar</button> 
+            </form>
+
+            -->
+
+            {% comment %} Formulario Carrera{% endcomment %}
+
+
+            <form>
+                {% csrf_token %}
+                <fieldset>
+                  <legend>Form Carreras</legend>
+                  <div class="mb-3">
+                    {{form_carreras.as_div}}
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>    
 
 
 {% endblock content %}

@@ -1,0 +1,36 @@
+{% extends "home/layouts/base.html" %}
+
+{% load static %}
+
+{% block title %}Register{% endblock title %}
+
+{% block content %}
+
+    <main class="container">
+        <div class="row my-4">
+
+            {% if msj %}
+
+            <div class="alert alert-{{msj_type}}" role="alert">
+                {{msj}}
+            </div>
+              
+
+            {% endif %}
+           
+
+            <form class="needs-validation"  novalidate method="POST">
+                {% csrf_token %}
+                <fieldset>
+                  <legend>Form Register</legend>
+                  <div class="mb-3">
+                    {{form.as_div}}
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>    
+
+
+{% endblock content %}
